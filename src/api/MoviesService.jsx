@@ -9,4 +9,12 @@ export default class MoviesService {
   static getMovieDetail(imovieID) {
     return api.get(`movie/${imovieID}`);
   }
+
+  static searchByMovieTitle(movietitle) {
+    return api.get(`search/movie`, {
+      params: {
+        query: movietitle,
+      },
+    });
+  }
 }

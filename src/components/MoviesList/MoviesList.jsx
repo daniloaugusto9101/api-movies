@@ -3,7 +3,7 @@ import MovieItem from "../MovieItem/MovieItem";
 
 const MoviesList = ({ movies }) => {
   return (
-    <section>
+    <section className="grid md:grid-cols-4 gap-3 mt-2">
       {movies.map((movie) => (
         <MovieItem key={movie.id} movie={movie} />
       ))}
